@@ -1,112 +1,71 @@
-# MMMUT Help Desk - Admission Chatbot
+# 🎓 MMMUT Admission Help Desk
 
-A comprehensive chatbot system for MMMUT (Madan Mohan Malaviya University of Technology) admission queries, built using Google's Gemini AI.
+A modern, AI-powered chatbot system designed to assist prospective students with admission-related queries for **Madan Mohan Malaviya University of Technology (MMMUT)**, Gorakhpur.
 
-## 🎯 Project Overview
+## ✨ Features
 
-This project creates an intelligent chatbot that can answer admission-related queries for MMMUT by processing the official UG Admission Brochure and providing accurate, contextual responses to prospective students.
+- **🤖 AI-Powered Intelligence**: Uses Google Gemini AI for intelligent, context-aware responses
+- **📚 Comprehensive Information**: Covers courses, eligibility, fees, important dates, and facilities
+- **💻 Modern Web Interface**: Beautiful, responsive design with real-time chat experience
+- **🔄 Session Management**: Maintains conversation context across interactions
+- **📊 Smart Analytics**: Confidence scoring and response quality metrics
+- **🌐 RESTful API**: Clean API endpoints for integration with other systems
+- **📱 Mobile Responsive**: Works seamlessly on all devices
 
-## 🏗️ Project Structure
+## 📁 Project Structure
 
 ```
 MMMUTHelpDesk/
-│
-├── data/
-│   ├── raw_data/                # Raw data files (e.g., UG Admission Brochure PDF)
-│   └── structured_data.json     # Structured data after extraction
-│
-├── src/
-│   ├── __init__.py              # Initialize the project
-│   ├── data_extraction.py       # Extract data from the admission brochure
-│   ├── data_organization.py     # Organize the extracted data into categories
-│   ├── chatbot.py               # Main chatbot code using Gemini API
-│   ├── train_chatbot.py         # Train the chatbot with the extracted data
-│   ├── integration.py           # Code to integrate chatbot into the website
-│   └── testing.py               # Testing the chatbot functionality
-│
-├── config/
-│   ├── settings.py              # Configuration settings (API keys, paths, etc.)
-│   └── chatbot_config.py        # Chatbot-specific configurations
-│
-├── requirements.txt            # Python dependencies
-├── .env                        # Environment variables (API keys)
-├── setup.py                    # Complete setup script
-├── initialize.py               # Data initialization script
-├── install_dependencies.py     # Dependency installation script
-├── run_chatbot.py              # Run chatbot CLI
-├── run_web.py                  # Run web interface
-└── README.md                   # This file
+├── 🚀 app.py                    # Main application entry point
+├── 📁 src/
+│   ├── 🤖 chatbot.py           # Core chatbot logic with AI integration
+│   ├── 🌐 integration.py       # Web interface and API endpoints
+│   └── 📄 __init__.py
+├── ⚙️ config/
+│   ├── 🔧 settings.py          # Application configuration
+│   └── 🎛️ chatbot_config.py    # AI model and chatbot settings
+├── 📊 data/
+│   ├── 📋 organized_data.json   # Processed admission data
+│   ├── 📄 structured_data.json # Raw structured data
+│   └── 📁 raw_data/            # Original PDF documents
+├── 📦 requirements.txt          # Python dependencies
+└── 📖 README.md                # This file
 ```
 
-## 🚀 Features
+## 🚀 Quick Start
 
-- **PDF Data Extraction**: Automatically extracts information from admission brochures
-- **Intelligent Query Processing**: Uses Google Gemini AI for natural language understanding
-- **Structured Data Organization**: Categorizes admission information for efficient retrieval
-- **Web Integration**: Ready-to-integrate chatbot for websites
-- **Command Line Interface**: Interactive CLI for testing
-- **Comprehensive Testing**: Full test suite for reliability
-
-## 📋 Prerequisites
+### Prerequisites
 
 - Python 3.8 or higher
-- Google Gemini API key: `AIzaSyAh9YFINFypPDH3i5adUIxlfkv6Fydkzgg`
-- Git
+- Google Gemini API key ([Get one here](https://makersuite.google.com/app/apikey))
 
-## 🛠️ Quick Setup (Recommended)
+### Installation
 
-### Option 1: Automatic Setup
+1. **Clone the repository:**
 ```bash
-# Clone the repository
-git clone https://github.com/SuyashMishr/MMMUTHelpDesk.git
+git clone <repository-url>
 cd MMMUTHelpDesk
-
-# Run automatic setup (creates virtual environment and installs everything)
-python setup.py
 ```
 
-### Option 2: Manual Setup
+2. **Install dependencies:**
 ```bash
-# Clone the repository
-git clone https://github.com/SuyashMishr/MMMUTHelpDesk.git
-cd MMMUTHelpDesk
-
-# Install dependencies (uses system Python)
-python install_dependencies.py
-
-# Initialize data
-python initialize.py
-```
-
-### Option 3: Traditional Setup
-```bash
-# Clone the repository
-git clone https://github.com/SuyashMishr/MMMUTHelpDesk.git
-cd MMMUTHelpDesk
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Initialize data
-python initialize.py
 ```
 
-## 🎮 Usage
-
-### Command Line Interface
+3. **Set up environment variables:**
 ```bash
-python run_chatbot.py
+# Create a .env file in the root directory
+echo "GEMINI_API_KEY=your_gemini_api_key_here" > .env
 ```
 
-### Web Interface
+### 🏃‍♂️ Running the Application
+
+**Start the web application:**
 ```bash
-python run_web.py
+python app.py
 ```
-Then open your browser to `http://localhost:5000`
+
+Then open your browser and go to: **http://localhost:5000**
 
 ### Direct Module Usage
 ```bash

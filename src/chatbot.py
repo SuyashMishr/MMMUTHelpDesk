@@ -171,55 +171,122 @@ class AdmissionChatbot:
             return self._create_error_response(str(e))
     
     def _preprocess_query(self, query: str) -> str:
-        """Preprocess user query"""
-        # Convert to lowercase and strip whitespace
-        query = query.lower().strip()
-        
-        # Remove extra spaces
-        query = re.sub(r'\s+', ' ', query)
-        
-        # Handle common abbreviations
+        """Enhanced preprocessing for better query understanding"""
+        # Basic cleaning
+        query = query.strip()
+        if not query:
+            return query
+
+        # Preserve original case for proper nouns but create lowercase version for processing
+        original_query = query
+        query_lower = query.lower()
+
+        # Remove extra spaces and normalize punctuation
+        query_lower = re.sub(r'\s+', ' ', query_lower)
+        query_lower = re.sub(r'[^\w\s\-\.]', ' ', query_lower)
+
+        # Handle common abbreviations and expansions
         abbreviations = {
             'cse': 'computer science engineering',
             'ece': 'electronics and communication engineering',
+            'eee': 'electrical and electronics engineering',
             'ee': 'electrical engineering',
             'me': 'mechanical engineering',
             'ce': 'civil engineering',
             'it': 'information technology',
             'btech': 'bachelor of technology',
-            'b.tech': 'bachelor of technology'
+            'b.tech': 'bachelor of technology',
+            'mtech': 'master of technology',
+            'm.tech': 'master of technology',
+            'phd': 'doctor of philosophy',
+            'ph.d': 'doctor of philosophy',
+            'mmmut': 'madan mohan malaviya university of technology',
+            'gorakhpur': 'gorakhpur uttar pradesh',
+            'up': 'uttar pradesh'
         }
-        
+
+        # Apply abbreviation expansions
         for abbr, full_form in abbreviations.items():
-            query = query.replace(abbr, full_form)
-        
-        return query
+            query_lower = re.sub(r'\b' + re.escape(abbr) + r'\b', full_form, query_lower)
+
+        # Handle common question patterns
+        question_patterns = {
+            r'\bwhat\s+is\s+the\s+': 'tell me about the ',
+            r'\bhow\s+much\s+': 'what is the cost of ',
+            r'\bwhen\s+is\s+': 'what are the dates for ',
+            r'\bwhere\s+is\s+': 'what is the location of ',
+            r'\bcan\s+i\s+': 'am i eligible for ',
+            r'\bdo\s+you\s+have\s+': 'does mmmut offer '
+        }
+
+        for pattern, replacement in question_patterns.items():
+            query_lower = re.sub(pattern, replacement, query_lower)
+
+        # Return processed query while preserving some original formatting
+        return query_lower
     
     def _check_quick_responses(self, query: str) -> Optional[str]:
-        """Check if query matches any quick response patterns"""
-        # Greeting patterns
-        greeting_patterns = ['hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening']
+        """Check if query matches any quick response patterns with improved matching"""
+        # Enhanced greeting patterns
+        greeting_patterns = [
+            'hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening',
+            'namaste', 'greetings', 'start', 'begin', 'help me'
+        ]
         if any(pattern in query for pattern in greeting_patterns):
-            return self.quick_responses.get("greeting")
-        
-        # Category-specific patterns
+            return self.quick_responses.get("greeting",
+                "Hello! Welcome to MMMUT Admission Help Desk. I'm here to assist you with all your admission-related queries. How can I help you today?")
+
+        # Enhanced category-specific patterns with better matching
         category_patterns = {
-            'courses': ['course', 'program', 'branch', 'stream', 'what courses'],
-            'eligibility': ['eligibility', 'criteria', 'qualification', 'requirement'],
-            'fees': ['fee', 'cost', 'payment', 'how much', 'price'],
-            'dates': ['date', 'deadline', 'when', 'schedule', 'timeline'],
-            'contact': ['contact', 'phone', 'email', 'address', 'reach'],
-            'facilities': ['facility', 'hostel', 'library', 'lab', 'infrastructure'],
-            'placement': ['placement', 'job', 'career', 'salary', 'package'],
-            'location': ['where', 'location', 'address', 'situated']
+            'courses': [
+                'course', 'program', 'branch', 'stream', 'what courses', 'engineering',
+                'btech', 'b.tech', 'degree', 'specialization', 'department'
+            ],
+            'eligibility': [
+                'eligibility', 'criteria', 'qualification', 'requirement', 'marks',
+                'percentage', 'cutoff', 'cut off', 'minimum marks', 'qualify'
+            ],
+            'fees': [
+                'fee', 'cost', 'payment', 'how much', 'price', 'tuition',
+                'scholarship', 'financial aid', 'installment', 'money'
+            ],
+            'dates': [
+                'date', 'deadline', 'when', 'schedule', 'timeline', 'last date',
+                'application date', 'admission date', 'important dates'
+            ],
+            'contact': [
+                'contact', 'phone', 'email', 'address', 'reach', 'office',
+                'helpline', 'support', 'call', 'write'
+            ],
+            'facilities': [
+                'facility', 'hostel', 'library', 'lab', 'infrastructure',
+                'campus', 'accommodation', 'mess', 'wifi', 'sports'
+            ],
+            'placement': [
+                'placement', 'job', 'career', 'salary', 'package', 'company',
+                'recruitment', 'internship', 'employment'
+            ],
+            'location': [
+                'where', 'location', 'address', 'situated', 'gorakhpur',
+                'how to reach', 'directions'
+            ]
         }
-        
+
+        # Score-based matching for better accuracy
+        best_match = None
+        best_score = 0
+
         for category, patterns in category_patterns.items():
-            if any(pattern in query for pattern in patterns):
-                response = self.quick_responses.get(category)
-                if response:
-                    return response
-        
+            score = sum(1 for pattern in patterns if pattern in query)
+            if score > best_score:
+                best_score = score
+                best_match = category
+
+        if best_match and best_score > 0:
+            response = self.quick_responses.get(best_match)
+            if response:
+                return response
+
         return None
     
     def _generate_ai_response(self, query: str) -> Dict[str, Any]:
@@ -323,22 +390,71 @@ class AdmissionChatbot:
         return [faq[0] for faq in relevant_faqs[:5]]
     
     def _create_prompt(self, query: str, context: str) -> str:
-        """Create prompt for Gemini AI"""
+        """Create enhanced prompt for Gemini AI with better structure"""
+        # Analyze query intent for better response formatting
+        query_intent = self._analyze_query_intent(query)
+        query_complexity = "comprehensive and detailed" if len(query.split()) > 8 else "clear and focused"
+
         prompt = f"""
 {self.system_prompt}
 
-Based on the following information about MMMUT (Madan Mohan Malaviya University of Technology) admissions, please answer the user's question accurately and helpfully.
+CONVERSATION CONTEXT:
+You are assisting a prospective student with MMMUT admission queries. Provide helpful, accurate, and encouraging responses.
 
-CONTEXT INFORMATION:
+KNOWLEDGE BASE:
 {context}
 
-USER QUESTION: {query}
+STUDENT'S QUESTION: "{query}"
 
-Please provide a helpful, accurate, and concise response. If the information is not available in the context, please say so and suggest contacting the admission office. Keep the response friendly and professional.
+RESPONSE GUIDELINES:
+🎯 **Intent**: {query_intent}
+📝 **Style**: {query_complexity}
+✅ **Requirements**:
+   • Start with a direct answer to their specific question
+   • Use emojis and formatting to make responses engaging and easy to read
+   • Provide specific details (numbers, dates, requirements) when available
+   • Structure information with bullet points or numbered lists for clarity
+   • Include practical next steps or actionable advice
+   • If information is incomplete, guide them to official sources
+   • End with an encouraging note and offer to help with related questions
 
-RESPONSE:
+FORMATTING EXAMPLES:
+- Use **bold** for important information
+- Use bullet points (•) for lists
+- Use emojis to make content more engaging
+- Use clear section headers when covering multiple topics
+
+RESPONSE TONE:
+- Professional yet friendly and approachable
+- Encouraging and supportive
+- Confident in providing accurate information
+- Helpful in guiding next steps
+
+Please provide a comprehensive, well-formatted response:
 """
         return prompt
+
+    def _analyze_query_intent(self, query: str) -> str:
+        """Analyze the primary intent of the user's query"""
+        query_lower = query.lower()
+
+        intent_keywords = {
+            'course_inquiry': ['course', 'program', 'branch', 'engineering', 'btech'],
+            'eligibility_check': ['eligibility', 'qualify', 'marks', 'percentage', 'criteria'],
+            'fee_information': ['fee', 'cost', 'payment', 'scholarship', 'financial'],
+            'admission_process': ['admission', 'apply', 'application', 'procedure', 'form'],
+            'deadline_inquiry': ['date', 'deadline', 'when', 'last date', 'timeline'],
+            'facility_information': ['hostel', 'library', 'lab', 'facility', 'campus'],
+            'placement_inquiry': ['placement', 'job', 'career', 'company', 'salary'],
+            'contact_request': ['contact', 'phone', 'email', 'address', 'reach'],
+            'general_information': ['about', 'university', 'college', 'mmmut']
+        }
+
+        for intent, keywords in intent_keywords.items():
+            if any(keyword in query_lower for keyword in keywords):
+                return intent.replace('_', ' ').title()
+
+        return "General Inquiry"
     
     def _add_to_history(self, query: str, response: str):
         """Add query and response to conversation history"""
