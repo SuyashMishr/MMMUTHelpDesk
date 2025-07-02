@@ -1,0 +1,296 @@
+{
+  "university": {
+    "data": {
+      "full_name": "Madan Mohan Malaviya University of Technology",
+      "short_name": "MMMUT",
+      "location": "Gorakhpur, Uttar Pradesh, India",
+      "established": "1962",
+      "type": "Government University",
+      "accreditation": "NAAC Accredited",
+      "recognition": "UGC Recognized"
+    },
+    "keywords": [
+      "university",
+      "about",
+      "mmmut",
+      "gorakhpur",
+      "established",
+      "government"
+    ],
+    "description": "General information about the university"
+  },
+  "courses": {
+    "data": {
+      "undergraduate": {
+        "engineering": [
+          "Computer Science and Engineering",
+          "Information Technology",
+          "Electronics and Communication Engineering",
+          "Electrical Engineering",
+          "Mechanical Engineering",
+          "Civil Engineering",
+          "Chemical Engineering",
+          "Biotechnology"
+        ],
+        "other": [
+          "undergraduate",
+          "postgraduate"
+        ]
+      },
+      "duration": "4 years",
+      "degree": "Bachelor of Technology (B.Tech)"
+    },
+    "keywords": [
+      "courses",
+      "programs",
+      "btech",
+      "engineering",
+      "computer science",
+      "mechanical",
+      "civil",
+      "electrical"
+    ],
+    "description": "Available undergraduate and postgraduate programs"
+  },
+  "admission_process": {
+    "data": {
+      "steps": [
+        "Fill online application form",
+        "Upload required documents",
+        "Pay application fee",
+        "Appear for entrance examination (if applicable)",
+        "Check merit list",
+        "Attend counseling session",
+        "Document verification",
+        "Fee payment and admission confirmation"
+      ],
+      "entrance_exam": "JEE Main",
+      "selection_criteria": "Merit-based on entrance exam scores",
+      "reservation": "As per government norms"
+    },
+    "keywords": [
+      "admission",
+      "process",
+      "procedure",
+      "apply",
+      "application",
+      "form",
+      "steps"
+    ],
+    "description": "Step-by-step admission procedure"
+  },
+  "eligibility": {
+    "data": {
+      "academic_qualification": "10+2 or equivalent",
+      "minimum_marks": "75% in 10+2",
+      "required_subjects": "Physics, Chemistry, Mathematics",
+      "entrance_exam": "JEE Main",
+      "age_limit": "No age limit",
+      "nationality": "Indian/NRI/Foreign nationals"
+    },
+    "keywords": [
+      "eligibility",
+      "criteria",
+      "qualification",
+      "marks",
+      "percentage",
+      "requirements",
+      "10+2"
+    ],
+    "description": "Academic requirements for admission"
+  },
+  "fees": {
+    "data": {
+      "tuition_fee": "50,000",
+      "hostel_fee": "25,000",
+      "mess_fee": "20,000",
+      "other_charges": "5,000",
+      "total_annual_fee": "1,00,000",
+      "payment_modes": [
+        "Online",
+        "Demand Draft",
+        "Bank Transfer"
+      ],
+      "scholarship": "Available for meritorious students",
+      "fee_refund_policy": "As per university rules"
+    },
+    "keywords": [
+      "fees",
+      "cost",
+      "payment",
+      "tuition",
+      "hostel",
+      "scholarship",
+      "money"
+    ],
+    "description": "Detailed fee information"
+  },
+  "important_dates": {
+    "data": {
+      "application_start": "March 1, 2024",
+      "application_end": "April 30, 2024",
+      "entrance_exam": "May 15, 2024",
+      "result_declaration": "June 15, 2024",
+      "counseling_start": "July 1, 2024",
+      "admission_confirmation": "July 31, 2024",
+      "classes_begin": "August 15, 2024"
+    },
+    "keywords": [
+      "dates",
+      "deadline",
+      "schedule",
+      "timeline",
+      "when",
+      "last date",
+      "exam date"
+    ],
+    "description": "Key dates for admission process"
+  },
+  "facilities": {
+    "data": {
+      "academic": [
+        "Central Library with 50,000+ books",
+        "Computer Labs with latest equipment",
+        "Well-equipped laboratories",
+        "Smart classrooms"
+      ],
+      "residential": [
+        "Boys Hostel",
+        "Girls Hostel",
+        "Mess facilities"
+      ],
+      "recreational": [
+        "Sports Complex",
+        "Gymnasium",
+        "Auditorium",
+        "Playground"
+      ],
+      "other": [
+        "academic",
+        "residential",
+        "recreational",
+        "other"
+      ]
+    },
+    "keywords": [
+      "facilities",
+      "infrastructure",
+      "hostel",
+      "library",
+      "lab",
+      "sports",
+      "wifi"
+    ],
+    "description": "Available facilities and infrastructure"
+  },
+  "placement": {
+    "data": {
+      "placement_percentage": "85%",
+      "average_package": "6.5 LPA",
+      "highest_package": "25 LPA",
+      "top_recruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Accenture",
+        "IBM",
+        "Microsoft",
+        "Amazon",
+        "Google",
+        "Flipkart"
+      ],
+      "placement_cell": "Active placement cell",
+      "training_programs": "Soft skills and technical training",
+      "internship_opportunities": "Available with leading companies"
+    },
+    "keywords": [
+      "placement",
+      "job",
+      "career",
+      "salary",
+      "package",
+      "companies",
+      "recruitment"
+    ],
+    "description": "Career opportunities and placement statistics"
+  },
+  "contact": {
+    "data": {
+      "admission_office": {
+        "phone": "+91-551-2273958",
+        "email": "admission@mmmut.ac.in",
+        "address": "MMMUT, Gorakhpur - 273010, Uttar Pradesh"
+      },
+      "university_website": "https://www.mmmut.ac.in",
+      "office_hours": "9:00 AM to 5:00 PM (Monday to Friday)",
+      "helpline": "1800-XXX-XXXX",
+      "social_media": {
+        "facebook": "facebook.com/mmmut",
+        "twitter": "@mmmut_official"
+      }
+    },
+    "keywords": [
+      "contact",
+      "phone",
+      "email",
+      "address",
+      "office",
+      "help",
+      "support"
+    ],
+    "description": "How to reach the admission office"
+  },
+  "faqs": [
+    {
+      "question": "What is the eligibility criteria for B.Tech admission?",
+      "answer": "Candidates must have passed 10+2 with Physics, Chemistry, and Mathematics with minimum 75% marks and qualify JEE Main.",
+      "category": "eligibility"
+    },
+    {
+      "question": "What is the fee structure for B.Tech?",
+      "answer": "The annual fee is approximately ₹1,00,000 including tuition, hostel, and other charges.",
+      "category": "fees"
+    },
+    {
+      "question": "When do applications start?",
+      "answer": "Applications typically start in March and end in April. Check the official website for exact dates.",
+      "category": "important_dates"
+    },
+    {
+      "question": "What courses are offered?",
+      "answer": "MMMUT offers B.Tech in CSE, IT, ECE, EE, ME, CE, Chemical Engineering, and Biotechnology.",
+      "category": "courses"
+    },
+    {
+      "question": "Is hostel facility available?",
+      "answer": "Yes, separate hostels are available for boys and girls with mess facilities.",
+      "category": "facilities"
+    },
+    {
+      "question": "What is the placement record?",
+      "answer": "MMMUT has excellent placement record with 85%+ placement rate and average package of 6.5 LPA.",
+      "category": "placement"
+    },
+    {
+      "question": "How to contact admission office?",
+      "answer": "You can contact at +91-551-2273958 or email admission@mmmut.ac.in",
+      "category": "contact"
+    }
+  ],
+  "quick_responses": {
+    "greeting": [
+      "Hello! Welcome to MMMUT Admission Help Desk. How can I assist you today?",
+      "Hi there! I'm here to help with your MMMUT admission queries. What would you like to know?",
+      "Welcome! I can help you with information about MMMUT admissions. What's your question?"
+    ],
+    "courses": "MMMUT offers B.Tech programs in Computer Science, IT, Electronics, Electrical, Mechanical, Civil, Chemical Engineering, and Biotechnology.",
+    "eligibility": "For B.Tech admission, you need 10+2 with PCM and 75% marks, plus qualify JEE Main.",
+    "fees": "The annual fee is approximately ₹1,00,000 including all charges. Scholarships are available for meritorious students.",
+    "dates": "Applications typically open in March. Please check our website for current dates and deadlines.",
+    "contact": "Contact admission office: Phone: +91-551-2273958, Email: admission@mmmut.ac.in",
+    "facilities": "MMMUT has excellent facilities including library, labs, hostels, sports complex, and WiFi campus.",
+    "placement": "MMMUT has 85%+ placement rate with average package of 6.5 LPA. Top companies recruit from campus.",
+    "location": "MMMUT is located in Gorakhpur, Uttar Pradesh, India.",
+    "fallback": "I'm sorry, I don't have specific information about that. Could you please ask about courses, eligibility, fees, or other admission-related topics?"
+  }
+}

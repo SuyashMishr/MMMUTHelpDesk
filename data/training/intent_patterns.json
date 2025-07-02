@@ -1,0 +1,45 @@
+{
+  "greeting": [
+    "(?i)\\b(hello|hi|hey|good morning|good afternoon|good evening)\\b",
+    "(?i)\\b(greetings|salutations)\\b"
+  ],
+  "university_info": [
+    "(?i)\\b(about|what is|tell me about)\\s+(mmmut|university)\\b",
+    "(?i)\\b(location|where|address)\\b.*\\b(mmmut|university)\\b"
+  ],
+  "courses": [
+    "(?i)\\b(courses?|programs?|branches?|streams?)\\b",
+    "(?i)\\b(engineering|btech|b\\.tech)\\b.*\\b(courses?|programs?)\\b",
+    "(?i)\\b(computer science|mechanical|civil|electrical)\\b"
+  ],
+  "eligibility": [
+    "(?i)\\b(eligibility|criteria|requirements?|qualifications?)\\b",
+    "(?i)\\b(eligible|qualify|minimum marks)\\b",
+    "(?i)\\b(10\\+2|intermediate|jee)\\b"
+  ],
+  "fees": [
+    "(?i)\\b(fees?|cost|payment|money|expensive|cheap)\\b",
+    "(?i)\\b(how much|price|charges?)\\b",
+    "(?i)\\b(scholarship|financial aid)\\b"
+  ],
+  "dates": [
+    "(?i)\\b(dates?|deadline|when|schedule|timeline)\\b",
+    "(?i)\\b(application|admission|exam)\\s+(date|deadline)\\b",
+    "(?i)\\b(last date|important dates)\\b"
+  ],
+  "contact": [
+    "(?i)\\b(contact|phone|email|address|office)\\b",
+    "(?i)\\b(reach|call|write|visit)\\b",
+    "(?i)\\b(help|support|assistance)\\b"
+  ],
+  "facilities": [
+    "(?i)\\b(facilities|infrastructure|hostel|library)\\b",
+    "(?i)\\b(campus|labs?|laboratories)\\b",
+    "(?i)\\b(sports|gym|cafeteria)\\b"
+  ],
+  "placement": [
+    "(?i)\\b(placement|jobs?|career|recruitment)\\b",
+    "(?i)\\b(salary|package|companies)\\b",
+    "(?i)\\b(internship|training)\\b"
+  ]
+}

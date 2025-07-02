@@ -1,0 +1,336 @@
+{
+  "training_data": [
+    {
+      "input": "Tell me about the fee structure?",
+      "output": "Annual fee is approximately ₹100000",
+      "intent": "fees",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "How much does it cost?",
+      "output": "Total annual fee: ₹100000",
+      "intent": "fees",
+      "confidence": 0.9
+    },
+    {
+      "input": "Tell me about placement",
+      "output": "Here's information about placement: {'placement_percentage': '85%', 'average_package': '6.5 LPA', 'highest_package': '25 LPA', 'top_recruiters': ['TCS', 'Infosys', 'Wipro', 'Accenture', 'IBM', 'Microsoft', 'Amazon', 'Google', 'Flipkart'...",
+      "intent": "placement",
+      "confidence": 0.9
+    },
+    {
+      "input": "When do applications start?",
+      "output": "Applications typically start in March and end in April. Check the official website for exact dates.",
+      "intent": "important_dates",
+      "confidence": 1.0
+    },
+    {
+      "input": "Am I eligible for admission?",
+      "output": "You need 75% in 10+2 and qualify JEE Main",
+      "intent": "eligibility",
+      "confidence": 0.9
+    },
+    {
+      "input": "Tell me about MMMUT",
+      "output": "MMMUT is a Government University university located in Gorakhpur, Uttar Pradesh, India",
+      "intent": "university",
+      "confidence": 0.9
+    },
+    {
+      "input": "Tell me about the eligibility criteria for b.tech admission?",
+      "output": "Candidates must have passed 10+2 with Physics, Chemistry, and Mathematics with minimum 75% marks and qualify JEE Main.",
+      "intent": "eligibility",
+      "confidence": 0.8
+    },
+    {
+      "input": "How to contact admission office?",
+      "output": "You can contact at +91-551-2273958 or email admission@mmmut.ac.in",
+      "intent": "contact",
+      "confidence": 1.0
+    },
+    {
+      "input": "What do you know about the fee structure for b.tech?",
+      "output": "The annual fee is approximately ₹1,00,000 including tuition, hostel, and other charges.",
+      "intent": "fees",
+      "confidence": 0.8
+    },
+    {
+      "input": "When was MMMUT established?",
+      "output": "MMMUT was established in 1962",
+      "intent": "university",
+      "confidence": 0.9
+    },
+    {
+      "input": "Tell me about the fee structure for b.tech?",
+      "output": "The annual fee is approximately ₹1,00,000 including tuition, hostel, and other charges.",
+      "intent": "fees",
+      "confidence": 0.8
+    },
+    {
+      "input": "What time do applications start?",
+      "output": "Applications typically start in March and end in April. Check the official website for exact dates.",
+      "intent": "important_dates",
+      "confidence": 0.8
+    },
+    {
+      "input": "What is the fee structure for B.Tech?",
+      "output": "The annual fee is approximately ₹1,00,000 including tuition, hostel, and other charges.",
+      "intent": "fees",
+      "confidence": 1.0
+    },
+    {
+      "input": "Can you explain the fee structure for b.tech?",
+      "output": "The annual fee is approximately ₹1,00,000 including tuition, hostel, and other charges.",
+      "intent": "fees",
+      "confidence": 0.8
+    },
+    {
+      "input": "What time was mmmut established?",
+      "output": "MMMUT was established in 1962",
+      "intent": "university",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "Tell me about admission_process",
+      "output": "Here's information about admission_process: {'steps': ['Fill online application form', 'Upload required documents', 'Pay application fee', 'Appear for entrance examination (if applicable)', 'Check merit list', 'Attend counseling session', 'Docu...",
+      "intent": "admission_process",
+      "confidence": 0.9
+    },
+    {
+      "input": "Can you explain the eligibility criteria?",
+      "output": "Eligibility: 75% in 10+2, 10+2 with PCM",
+      "intent": "eligibility",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "Where can i find mmmut located?",
+      "output": "MMMUT is located in Gorakhpur, Uttar Pradesh, India",
+      "intent": "university",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "How expensive does it cost?",
+      "output": "Total annual fee: ₹100000",
+      "intent": "fees",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "Tell me about contact",
+      "output": "Here's information about contact: {'admission_office': {'phone': '+91-551-2273958', 'email': 'admission@mmmut.ac.in', 'address': 'MMMUT, Gorakhpur - 273010, Uttar Pradesh'}, 'university_website': 'https://www.mmmut.ac.in', 'office_hou...",
+      "intent": "contact",
+      "confidence": 0.9
+    },
+    {
+      "input": "Tell me about mmmut?",
+      "output": "MMMUT is Madan Mohan Malaviya University of Technology",
+      "intent": "university",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "What do you know about the fee structure?",
+      "output": "Annual fee is approximately ₹100000",
+      "intent": "fees",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "What is the fee structure?",
+      "output": "Annual fee is approximately ₹100000",
+      "intent": "fees",
+      "confidence": 0.9
+    },
+    {
+      "input": "Can you explain the eligibility criteria for b.tech admission?",
+      "output": "Candidates must have passed 10+2 with Physics, Chemistry, and Mathematics with minimum 75% marks and qualify JEE Main.",
+      "intent": "eligibility",
+      "confidence": 0.8
+    },
+    {
+      "input": "Tell me about the placement record?",
+      "output": "MMMUT has excellent placement record with 85%+ placement rate and average package of 6.5 LPA.",
+      "intent": "placement",
+      "confidence": 0.8
+    },
+    {
+      "input": "What do you know about the eligibility criteria for b.tech admission?",
+      "output": "Candidates must have passed 10+2 with Physics, Chemistry, and Mathematics with minimum 75% marks and qualify JEE Main.",
+      "intent": "eligibility",
+      "confidence": 0.8
+    },
+    {
+      "input": "Where is MMMUT located?",
+      "output": "MMMUT is located in Gorakhpur, Uttar Pradesh, India",
+      "intent": "university",
+      "confidence": 0.9
+    },
+    {
+      "input": "What courses are offered?",
+      "output": "MMMUT offers B.Tech in CSE, IT, ECE, EE, ME, CE, Chemical Engineering, and Biotechnology.",
+      "intent": "courses",
+      "confidence": 1.0
+    },
+    {
+      "input": "What is the cost does it cost?",
+      "output": "Total annual fee: ₹100000",
+      "intent": "fees",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "What is the location of mmmut located?",
+      "output": "MMMUT is located in Gorakhpur, Uttar Pradesh, India",
+      "intent": "university",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "Tell me about engineering courses",
+      "output": "Engineering courses available: Computer Science and Engineering, Information Technology, Electronics and Communication Engineering, Electrical Engineering, Mechanical Engineering, Civil Engineering, Chemical Engineering, Biotechnology",
+      "intent": "courses",
+      "confidence": 0.9
+    },
+    {
+      "input": "Can you explain the fee structure?",
+      "output": "Annual fee is approximately ₹100000",
+      "intent": "fees",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "What is MMMUT?",
+      "output": "MMMUT is Madan Mohan Malaviya University of Technology",
+      "intent": "university",
+      "confidence": 0.9
+    },
+    {
+      "input": "What do you know about mmmut?",
+      "output": "MMMUT is Madan Mohan Malaviya University of Technology",
+      "intent": "university",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "Which branches are available?",
+      "output": "Available branches: Computer Science and Engineering, Information Technology, Electronics and Communication Engineering, Electrical Engineering, Mechanical Engineering, Civil Engineering, Chemical Engineering, Biotechnology",
+      "intent": "courses",
+      "confidence": 0.9
+    },
+    {
+      "input": "What are the branches are available?",
+      "output": "Available branches: Computer Science and Engineering, Information Technology, Electronics and Communication Engineering, Electrical Engineering, Mechanical Engineering, Civil Engineering, Chemical Engineering, Biotechnology",
+      "intent": "courses",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "Can you explain mmmut?",
+      "output": "MMMUT is Madan Mohan Malaviya University of Technology",
+      "intent": "university",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "At what time was mmmut established?",
+      "output": "MMMUT was established in 1962",
+      "intent": "university",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "Is hostel facility available?",
+      "output": "Yes, separate hostels are available for boys and girls with mess facilities.",
+      "intent": "facilities",
+      "confidence": 1.0
+    },
+    {
+      "input": "What do you know about the placement record?",
+      "output": "MMMUT has excellent placement record with 85%+ placement rate and average package of 6.5 LPA.",
+      "intent": "placement",
+      "confidence": 0.8
+    },
+    {
+      "input": "What are the admission requirements?",
+      "output": "Requirements: JEE Main and 75% in 10+2",
+      "intent": "eligibility",
+      "confidence": 0.9
+    },
+    {
+      "input": "At what time do applications start?",
+      "output": "Applications typically start in March and end in April. Check the official website for exact dates.",
+      "intent": "important_dates",
+      "confidence": 0.8
+    },
+    {
+      "input": "Tell me about important_dates",
+      "output": "Here's information about important_dates: {'application_start': 'March 1, 2024', 'application_end': 'April 30, 2024', 'entrance_exam': 'May 15, 2024', 'result_declaration': 'June 15, 2024', 'counseling_start': 'July 1, 2024', 'admission_confi...",
+      "intent": "important_dates",
+      "confidence": 0.9
+    }
+  ],
+  "validation_data": [
+    {
+      "input": "What courses are offered?",
+      "output": "MMMUT offers B.Tech in Computer Science and Engineering, Information Technology, Electronics and Communication Engineering, Electrical Engineering, Mechanical Engineering, Civil Engineering, Chemical Engineering, Biotechnology",
+      "intent": "courses",
+      "confidence": 0.9
+    },
+    {
+      "input": "Tell me about facilities",
+      "output": "Here's information about facilities: {'academic': ['Central Library with 50,000+ books', 'Computer Labs with latest equipment', 'Well-equipped laboratories', 'Smart classrooms'], 'residential': ['Boys Hostel', 'Girls Hostel', 'Mess facil...",
+      "intent": "facilities",
+      "confidence": 0.9
+    },
+    {
+      "input": "What branches are available?",
+      "output": "Available branches: Computer Science and Engineering, Information Technology, Electronics and Communication Engineering, Electrical Engineering, Mechanical Engineering, Civil Engineering, Chemical Engineering, Biotechnology",
+      "intent": "courses",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "Tell me about fees",
+      "output": "Fee structure includes tuition and other charges, total ₹100000",
+      "intent": "fees",
+      "confidence": 0.9
+    },
+    {
+      "input": "What is the eligibility criteria?",
+      "output": "Eligibility: 75% in 10+2, 10+2 with PCM",
+      "intent": "eligibility",
+      "confidence": 0.9
+    },
+    {
+      "input": "What are the fees does it cost?",
+      "output": "Total annual fee: ₹100000",
+      "intent": "fees",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "What is the eligibility criteria for B.Tech admission?",
+      "output": "Candidates must have passed 10+2 with Physics, Chemistry, and Mathematics with minimum 75% marks and qualify JEE Main.",
+      "intent": "eligibility",
+      "confidence": 1.0
+    },
+    {
+      "input": "Can you explain the placement record?",
+      "output": "MMMUT has excellent placement record with 85%+ placement rate and average package of 6.5 LPA.",
+      "intent": "placement",
+      "confidence": 0.8
+    },
+    {
+      "input": "What do you know about the eligibility criteria?",
+      "output": "Eligibility: 75% in 10+2, 10+2 with PCM",
+      "intent": "eligibility",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "Tell me about the eligibility criteria?",
+      "output": "Eligibility: 75% in 10+2, 10+2 with PCM",
+      "intent": "eligibility",
+      "confidence": 0.7200000000000001
+    },
+    {
+      "input": "What is the placement record?",
+      "output": "MMMUT has excellent placement record with 85%+ placement rate and average package of 6.5 LPA.",
+      "intent": "placement",
+      "confidence": 1.0
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-07-02T13:57:22.298091",
+    "total_examples": 54,
+    "training_examples": 43,
+    "validation_examples": 11
+  }
+}
