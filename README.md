@@ -219,9 +219,8 @@ This project is licensed under the MIT License.
 
 For support:
 - Create an issue on GitHub
-- Email: [your-email@example.com]
+- Email: [suyashmishraa983@gmail.com]
 - Check the troubleshooting section above
 
 ---
 
-**🔐 Security Note**: Your API key is already configured in the `.env` file. Keep this file secure and never share it publicly.
